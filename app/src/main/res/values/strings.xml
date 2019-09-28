@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Foosball</string>
+	<string name="app_name">Foosball</string>
 	<string name="red_wins">RED WINS</string>
 	<string name="blue_wins">BLUE WINS</string>
+	<string name="title_activity_password">PasswordActivity</string>
+	<string name="haslo">Hasło</string>
+	<string name="zapisz">Zapisz</string>
 </resources>

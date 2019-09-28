@@ -5,16 +5,17 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
-public class RetrofitBuilder {
+class RetrofitBuilder {
 
 	private static final String BASE_URL = "https://foosball-unity.herokuapp.com/";
 
-	public static Object getService(Class<?> clas) {
+	static Object createApiService(Class<?> clas) {
 
 		return build(BASE_URL)
 			.create(clas);
 	}
-	public static Object getService(Class<?> clas, String url) {
+
+	static Object createApiService(Class<?> clas, String url) {
 
 		return build(url).create(clas);
 	}
@@ -25,8 +26,8 @@ public class RetrofitBuilder {
 
 		return new Retrofit.Builder()
 			.client(client)
-			.baseUrl(url) .addConverterFactory(GsonConverterFactory.create())
-
+			.baseUrl(url)
+			.addConverterFactory(GsonConverterFactory.create())
 			.build();
 	}
 }

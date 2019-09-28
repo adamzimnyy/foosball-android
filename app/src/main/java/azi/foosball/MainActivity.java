@@ -45,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		ButterKnife.bind(this);
 
-		createPlayerButtons();;
+		createPlayerButtons();
+
+		new RestApiClient().wakeUp();
 	}
 
 	@OnClick(R.id.blueWinsButton)

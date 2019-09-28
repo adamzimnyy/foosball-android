@@ -17,4 +17,7 @@ public interface FoosballApi {
 
 	@POST("match")
 	Call<Void> saveMatch(@Body MatchForm match);
+	
+	@GET("wakeUp")
+	Call<Void> wakeUp();
 }

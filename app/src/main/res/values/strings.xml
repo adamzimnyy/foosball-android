@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Foosball</string>
+	<string name="red_wins">RED WINS</string>
+	<string name="blue_wins">BLUE WINS</string>
+</resources>

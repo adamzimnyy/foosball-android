@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<me.rishabhkhanna.customtogglebutton.CustomToggleButton
+		android:id="@+id/redTeamButton"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="64dp"
+		android:layout_margin="6dp"
+		app:checkedTextColor="@android:color/white"
+		app:checkedColor="@android:color/holo_red_dark"
+		app:uncheckedColor="@android:color/transparent"
+		app:uncheckedTextColor="@android:color/white"
+		android:layout_gravity="center"
+		/>
+	<me.rishabhkhanna.customtogglebutton.CustomToggleButton
+		android:id="@+id/blueTeamButton"
+		android:layout_width="0dp"
+		android:layout_weight="1"
+		android:layout_height="64dp"
+		android:layout_margin="6dp"
+		app:checkedTextColor="@android:color/white"
+		app:checkedColor="@color/blueTeam"
+		app:uncheckedColor="@android:color/transparent"
+		app:uncheckedTextColor="@android:color/white"
+		android:layout_gravity="center"
+		/>
+</LinearLayout>

@@ -29,18 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
 	@BindView(R.id.mainLayout) LinearLayout mainLayout;
 
-	Map<Player, ToggleButtons> buttonsMap = new HashMap<>();
-
-	Queue<ToggleButton> redQueue = new LinkedList<>();
-	Queue<ToggleButton> blueQueue = new LinkedList<>();
-
-	List<Player> redTeam = new ArrayList<>();
-	List<Player> blueTeam = new ArrayList<>();
-
 	@BindView(R.id.redWinsButton) Button redWinsButton;
 	@BindView(R.id.blueWinsButton) Button blueWinsButton;
 
-	RestApiClient restApiClient;
+	private Map<Player, ToggleButtons> buttonsMap = new HashMap<>();
+	private Queue<ToggleButton> redQueue = new LinkedList<>();
+	private Queue<ToggleButton> blueQueue = new LinkedList<>();
+	private List<Player> redTeam = new ArrayList<>();
+	private List<Player> blueTeam = new ArrayList<>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +45,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		ButterKnife.bind(this);
 
-		createPlayerButtons();
-
-		restApiClient = new RestApiClient();
+		createPlayerButtons();;
 	}
 
 	@OnClick(R.id.blueWinsButton)
@@ -156,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
 			this.red = red;
 		}
 
-		List<ToggleButton> getButtons(){
+		List<ToggleButton> getButtons() {
 
 			return Arrays.asList(blue, red);
 		}

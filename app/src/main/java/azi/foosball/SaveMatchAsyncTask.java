@@ -43,7 +43,7 @@ public class SaveMatchAsyncTask extends AsyncTask<MatchForm, Void, RestResponse>
 			Toast.makeText(weakActivity.get(), "Saved!", Toast.LENGTH_SHORT).show();
 		}
 		else {
-			Toast.makeText(weakActivity.get(), "Failed!" + response.getCode() + "  " + response.getMessage(), Toast.LENGTH_SHORT).show();
+			Toast.makeText(weakActivity.get(), "Failed! " + response.getCode() + "  " + response.getMessage(), Toast.LENGTH_SHORT).show();
 		}
 	}
 }

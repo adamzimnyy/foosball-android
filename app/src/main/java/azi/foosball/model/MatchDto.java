@@ -1,23 +1,25 @@
 package azi.foosball.model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
+import azi.foosball.Player;
 import azi.foosball.Team;
 
 
-class MatchDto {
+public class MatchDto {
 
 	private final LocalDateTime date;
+	private final List<Player> redTeam;
+	private final List<Player> blueTeam;
+	private final Team winner;
 
-	private final Team team;
-
-	private final boolean victory;
-
-	public MatchDto(LocalDateTime date, Team team, boolean victory) {
+	MatchDto(LocalDateTime date, List<Player> redTeam, List<Player> blueTeam, Team winner) {
 
 		this.date = date;
-		this.team = team;
-		this.victory = victory;
+		this.redTeam = redTeam;
+		this.blueTeam = blueTeam;
+		this.winner = winner;
 	}
 
 	public LocalDateTime getDate() {
@@ -25,13 +27,18 @@ class MatchDto {
 		return date;
 	}
 
-	public Team getTeam() {
+	public List<Player> getRedTeam() {
 
-		return team;
+		return redTeam;
 	}
 
-	public boolean isVictory() {
+	public List<Player> getBlueTeam() {
 
-		return victory;
+		return blueTeam;
+	}
+
+	public Team getWinner() {
+
+		return winner;
 	}
 }

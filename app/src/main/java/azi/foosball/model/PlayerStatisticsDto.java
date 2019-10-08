@@ -9,14 +9,14 @@ public class PlayerStatisticsDto {
 
 	private  final Player player;
 
-	private final MatchWinrates winrates;
+	private final WinRates winRates;
 
-	private  final List<MatchDto> matches;
+	private  final List<PlayerMatchDto> matches;
 
-	PlayerStatisticsDto(Player player, MatchWinrates winrates, List<MatchDto> matches) {
+	PlayerStatisticsDto(Player player, WinRates winRates, List<PlayerMatchDto> matches) {
 
 		this.player = player;
-		this.winrates = winrates;
+		this.winRates = winRates;
 		this.matches = matches;
 	}
 
@@ -25,13 +25,13 @@ public class PlayerStatisticsDto {
 		return player;
 	}
 
-	public List<MatchDto> getMatches() {
+	public List<PlayerMatchDto> getMatches() {
 
 		return matches;
 	}
 
-	public MatchWinrates getWinrates() {
+	public WinRates getWinRates() {
 
-		return winrates;
+		return winRates;
 	}
 }

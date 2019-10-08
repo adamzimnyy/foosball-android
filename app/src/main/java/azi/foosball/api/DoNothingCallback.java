@@ -1,10 +1,10 @@
-package azi.foosball;
+package azi.foosball.api;
 
 import retrofit2.Call;
 import retrofit2.Response;
 
 
-class DoNothingCallback implements retrofit2.Callback<Void> {
+public class DoNothingCallback implements retrofit2.Callback<Void> {
 
 	@Override
 	public void onResponse(Call<Void> call, Response<Void> response) {

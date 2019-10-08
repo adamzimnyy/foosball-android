@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#000000</color>
 	<color name="colorAccent">#FFD500</color>
 	<color name="blueTeam">#255FCF</color>
+	<color name="recyclerBg">#CECECE</color>
 </resources>

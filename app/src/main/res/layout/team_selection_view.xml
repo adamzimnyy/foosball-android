@@ -11,10 +11,8 @@
 		android:layout_weight="1"
 		android:layout_height="64dp"
 		android:layout_margin="6dp"
-		app:checkedTextColor="@android:color/white"
 		app:checkedColor="@android:color/holo_red_dark"
 		app:uncheckedColor="@android:color/transparent"
-		app:uncheckedTextColor="@android:color/white"
 		android:layout_gravity="center"
 		/>
 	<me.rishabhkhanna.customtogglebutton.CustomToggleButton
@@ -23,10 +21,8 @@
 		android:layout_weight="1"
 		android:layout_height="64dp"
 		android:layout_margin="6dp"
-		app:checkedTextColor="@android:color/white"
 		app:checkedColor="@color/blueTeam"
 		app:uncheckedColor="@android:color/transparent"
-		app:uncheckedTextColor="@android:color/white"
 		android:layout_gravity="center"
 		/>
 </LinearLayout>

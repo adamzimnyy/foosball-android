@@ -1,4 +1,4 @@
-package azi.foosball;
+package azi.foosball.ui.main;
 
 import static azi.foosball.Team.BLUE;
 import static azi.foosball.Team.RED;
@@ -14,41 +14,78 @@ import java.util.Queue;
 import java.util.stream.Collectors;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.ToggleButton;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import azi.foosball.Player;
+import azi.foosball.R;
+import azi.foosball.SaveMatchAsyncTask;
+import azi.foosball.Team;
 import azi.foosball.model.MatchForm;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class MainActivity extends AppCompatActivity {
+public class SaveMatchFragment extends Fragment {
 
 	@BindView(R.id.mainLayout) LinearLayout mainLayout;
 
 	@BindView(R.id.redWinsButton) Button redWinsButton;
 	@BindView(R.id.blueWinsButton) Button blueWinsButton;
 
+	@BindView(R.id.progress_indicator) ProgressBar progressBar;
+	@BindView(R.id.save_buttons_layout) View saveButtonsLayout;
+
+
+	static SaveMatchFragment newInstance() {
+
+		return new SaveMatchFragment();
+	}
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+	}
+
+	@Override
+	public View onCreateView(
+		@NonNull LayoutInflater inflater, ViewGroup container,
+		Bundle savedInstanceState) {
+
+		View root = inflater.inflate(R.layout.f_save_match, container, false);
+
+		ButterKnife.bind(this, root);
+		createPlayerButtons();
+
+		return root;
+	}
+
+	public void showProgress() {
+
+		progressBar.setVisibility(View.VISIBLE);
+		saveButtonsLayout.setVisibility(View.GONE);
+	}
+
+
+	public void hideProgress() {
+
+		progressBar.setVisibility(View.GONE);
+		saveButtonsLayout.setVisibility(View.VISIBLE);
+	}
+
 	private Map<Player, ToggleButtons> buttonsMap = new HashMap<>();
 	private Queue<ToggleButton> redQueue = new LinkedList<>();
 	private Queue<ToggleButton> blueQueue = new LinkedList<>();
 	private List<Player> redTeam = new ArrayList<>();
 	private List<Player> blueTeam = new ArrayList<>();
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		ButterKnife.bind(this);
-
-		createPlayerButtons();
-
-		new RestApiClient().wakeUp();
-	}
 
 	@OnClick(R.id.blueWinsButton)
 	void saveBlueWin() {
@@ -152,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
 			this.red = red;
 		}
 
-		List<ToggleButton> getButtons() {
+		public List<ToggleButton> getButtons() {
 
 			return Arrays.asList(blue, red);
 		}

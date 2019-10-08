@@ -5,4 +5,8 @@
 	<string name="title_activity_password">PasswordActivity</string>
 	<string name="haslo">Hasło</string>
 	<string name="zapisz">Zapisz</string>
+	<string name="title_activity_main3">Main3Activity</string>
+	<string name="tab_text_1">Zapisz mecz</string>
+	<string name="tab_text_2">Wyniki</string>
+	<string name="tab_text_3">Mecze</string>
 </resources>

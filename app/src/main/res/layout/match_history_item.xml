@@ -1,0 +1,81 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="8dp"
+	android:elevation="6dp"
+	android:padding="16dp">
+
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="16dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/red_team_1"
+					android:layout_width="wrap_content" android:textColor="@android:color/holo_red_dark"
+					android:layout_height="wrap_content"
+					android:text="Adam" />
+
+				<TextView
+					android:id="@+id/red_team_2"
+					android:layout_width="wrap_content" android:textColor="@android:color/holo_red_dark"
+					android:layout_height="wrap_content"
+					android:text="Daniel" />
+			</LinearLayout>
+
+
+			<LinearLayout
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/blue_team_1"
+					android:layout_width="wrap_content" android:textColor="@color/blueTeam"
+					android:layout_height="wrap_content"
+					android:layout_gravity="end"
+					android:text="Ula" />
+
+				<TextView
+					android:id="@+id/blue_team_2"
+					android:layout_width="wrap_content" android:textColor="@color/blueTeam"
+					android:layout_height="wrap_content"
+					android:layout_gravity="end"
+					android:text="Marcin" />
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+
+		<TextView
+			android:id="@+id/winner"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:text="red wins" />
+
+		<TextView
+			android:id="@+id/date"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:text="date" />
+	</LinearLayout>
+
+</androidx.cardview.widget.CardView>

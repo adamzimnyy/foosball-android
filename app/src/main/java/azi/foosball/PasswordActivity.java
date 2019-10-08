@@ -48,7 +48,7 @@ public class PasswordActivity extends AppCompatActivity {
 
 		if (Arrays.stream(Player.values()).map(Enum::name).anyMatch(name -> Objects.equals(name, password))) {
 
-			IntentHelper.startActivityIntent(this, MainActivity.class);
+			IntentHelper.startActivityIntent(this, Main3Activity.class);
 
 			SharedPreferences preferences = getPreferences(Context.MODE_PRIVATE);
 			preferences.edit().putString("password", password).apply();

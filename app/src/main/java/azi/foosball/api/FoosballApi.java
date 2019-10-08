@@ -1,7 +1,8 @@
-package azi.foosball;
+package azi.foosball.api;
 
 import java.util.List;
 
+import azi.foosball.model.MatchDto;
 import azi.foosball.model.MatchForm;
 import azi.foosball.model.PlayerStatisticsDto;
 import retrofit2.Call;
@@ -20,4 +21,7 @@ public interface FoosballApi {
 	
 	@GET("wakeUp")
 	Call<Void> wakeUp();
+
+	@GET("match")
+	Call<List<MatchDto>> getAllMatches();
 }

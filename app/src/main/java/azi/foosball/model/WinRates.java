@@ -1,20 +1,20 @@
 package azi.foosball.model;
 
-public class MatchWinrates {
+public class WinRates {
 
 	private final int totalMatches;
 	private  final int totalVictories;
 	private  final float winPercent;
 	private  final int redSideGames;
-	private  final int redSizeVictories;
+	private  final int redSideVictories;
 	private  final int blueSideGames;
 	private  final int blueSideVictories;
 
-	public MatchWinrates(int totalMatches,
+	public WinRates(int totalMatches,
 		int totalVictories,
 		float winPercent,
 		int redSideGames,
-		int redSizeVictories,
+		int redSideVictories,
 		int blueSideGames,
 		int blueSideVictories) {
 
@@ -22,7 +22,7 @@ public class MatchWinrates {
 		this.totalVictories = totalVictories;
 		this.winPercent = winPercent;
 		this.redSideGames = redSideGames;
-		this.redSizeVictories = redSizeVictories;
+		this.redSideVictories = redSideVictories;
 		this.blueSideGames = blueSideGames;
 		this.blueSideVictories = blueSideVictories;
 	}
@@ -47,9 +47,9 @@ public class MatchWinrates {
 		return redSideGames;
 	}
 
-	public int getRedSizeVictories() {
+	public int getRedSideVictories() {
 
-		return redSizeVictories;
+		return redSideVictories;
 	}
 
 	public int getBlueSideGames() {

@@ -1,7 +1,8 @@
 package azi.foosball.model;
 
-import java.time.LocalDateTime;
 import java.util.List;
+
+import org.threeten.bp.LocalDateTime;
 
 import azi.foosball.Player;
 import azi.foosball.Team;

@@ -1,11 +1,13 @@
 package azi.foosball;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
+
+import org.threeten.bp.DateTimeUtils;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.ZoneId;
+import org.threeten.bp.ZonedDateTime;
+import org.threeten.bp.temporal.ChronoUnit;
 
 
 public class DateUtils {
@@ -41,8 +43,7 @@ public class DateUtils {
 	public static String formatRelative(LocalDateTime date) {
 
 		ZonedDateTime zdt = date.atZone(ZoneId.systemDefault());
-		Date output = Date.from(zdt.toInstant());
-
+		Date output =  DateTimeUtils.toDate(zdt.toInstant());
 
 		if (minutesSince(date) < MINUTE) {
 			return android.text.format.DateUtils.getRelativeTimeSpanString(output.getTime(), new Date().getTime(), android.text.format.DateUtils.SECOND_IN_MILLIS) + "";

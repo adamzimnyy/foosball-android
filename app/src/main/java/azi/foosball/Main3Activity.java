@@ -1,6 +1,7 @@
 package azi.foosball;
 
 import com.google.android.material.tabs.TabLayout;
+import com.jakewharton.threetenabp.AndroidThreeTen;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,10 +19,13 @@ public class Main3Activity extends AppCompatActivity {
 		setContentView(R.layout.activity_main3);
 		SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
 		ViewPager viewPager = findViewById(R.id.view_pager);
+		viewPager.setOffscreenPageLimit(3);
 		viewPager.setAdapter(sectionsPagerAdapter);
 		TabLayout tabs = findViewById(R.id.tabs);
 		tabs.setupWithViewPager(viewPager);
 
-	new RestApiClient().wakeUp();
+		AndroidThreeTen.init(this);
+
+		new RestApiClient().wakeUp();
 	}
 }
